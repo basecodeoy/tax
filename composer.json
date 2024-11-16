@@ -1,0 +1,57 @@
+{
+    "name": "basecodeoy/tax",
+    "description": "A collection of utilities to work with taxes.",
+    "license": "MIT",
+    "keywords": [
+        "BaseCode Oy",
+        "laravel",
+        "intl"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/basecodeoy/tax",
+    "require": {
+        "php": "^8.3",
+        "ext-ctype": "*",
+        "ext-mbstring": "*",
+        "brick/math": "^0.11.0",
+        "brick/money": "^0.8.1",
+        "ibericode/vat": "^2.0.9",
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0",
+        "spatie/laravel-data": "^4.11.1"
+    },
+    "require-dev": {
+        "basecodeoy/standards": "^1.0.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "BaseCodeOy\\Tax\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi"
+    }
+}
