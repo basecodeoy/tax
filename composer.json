@@ -33,7 +33,7 @@
         "spatie/laravel-data": "^4.11.1"
     },
     "require-dev": {
-        "basecodeoy/standards": "^1.1.0"
+        "basecodeoy/standards": "^1.1.1"
     },
     "autoload": {
         "psr-4": {
